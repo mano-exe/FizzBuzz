@@ -59,13 +59,20 @@ Game game;
 	}
 	@Test
 	void test6() {
-		game.roll(10);
-		game.roll(3);
-		game.roll(4);
-		for (int i=0; i<16; i++) {
-			game.roll(0);
+		int[] tableau = {10,3,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	
+		for (int i=0; i<tableau.length; i++) {
+			game.roll(tableau[i]);
 		}
 		assertEquals(game.score(), 24);
+	}
+	@Test
+	void test7() {
+		int[] tableau = {1,2,10,0,10,4,2,0,10,6,2,0,10,6,4,8,2,2,7};
+		for (int i=0; i<tableau.length; i++) {
+			game.roll(tableau[i]);
+		}
+		assertEquals(game.score(),122);
 	}
 	
 }

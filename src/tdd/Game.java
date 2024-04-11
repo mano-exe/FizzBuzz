@@ -10,18 +10,19 @@ public class Game {
 		i++;
 	}
 	public  int score() {
-		for (int i = 0; i<j; i+=2) {
-			
-			if (this.lancers[i]+this.lancers[i+1]==10) {
-				this.lancers[i]+=this.lancers[i+2];
-			
-			}
+		for (int i = 0; i<j; i++) {
 			if (this.lancers[i]==10) {
-				this.lancers[i]+=(this.lancers[i+1]+this.lancers[i+2]);
+				score+=(this.lancers[i+1]+this.lancers[i+2]);
 				j--;
-				i--;
 			}
-			
+			else if (this.lancers[i]+this.lancers[i+1]==10) {
+				score+=this.lancers[i+2];
+				i++;
+				
+			}
+			else {
+				i++;
+			}
 			
 		}
 		for (int i = 0; i<j; i++) {

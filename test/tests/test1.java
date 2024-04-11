@@ -10,9 +10,17 @@ import tdd.Game;
 class test1 {
 
 	@Test
-	void test() {
+	void test1() {
 		Game.roll(0);
 		assertEquals(Game.score(),0);
+	}
+	@Test
+	void test2() {
+		for (int i=0; i<10; i++) {
+			Game.roll(0);
+		}
+		assertEquals(Game.score(),0);
+		
 	}
 
 }

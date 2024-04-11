@@ -38,7 +38,7 @@ Game game;
 		for (int j=0; j<10; j++) {
 			game.roll(2);
 		}
-		assertEquals(game.score(),0);
+		assertEquals(game.score(),30);
 	}
 	@Test
 	void test3() {
@@ -46,6 +46,16 @@ Game game;
 			game.roll(1);
 		}
 		assertEquals(game.score(),20);
+	}
+	@Test
+	void test5() {
+		game.roll(7);
+		game.roll(3);
+		game.roll(4);
+		for (int i=0; i<17; i++) {
+			game.roll(0);
+		}
+		assertEquals(game.score(), 18);
 	}
 	
 }

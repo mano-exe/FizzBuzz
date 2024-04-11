@@ -16,11 +16,18 @@ class test1 {
 	}
 	@Test
 	void test2() {
-		for (int i=0; i<10; i++) {
+		for (int i=0; i<20; i++) {
 			Game.roll(0);
 		}
 		assertEquals(Game.score(),0);
 		
+	}
+	@Test
+	void test3() {
+		for (int i=0; i<20; i++) {
+			Game.roll(1);
+		}
+		assertEquals(Game.score(),20);
 	}
 
 }
